@@ -23,12 +23,12 @@
 		
 			def minKeySon(self, root):
 				
-				Permette di trovare il Nodo con la chiave più piccola ( quello più a sinistra del nostro lbero)
+				Permette di trovare il Nodo con la chiave più piccola ( quello più a sinistra del nostro albero)
 		
 			def searchNodeAVL(self, key, value, height):
 			
-				Dato l'informazione della chiave, valore ealtezza, permette una ricerca in profondità dell'albero e restituisce
-				Il Nodo con quelle caratteristiche, va a sostituire il metodo searchNode() restituiva il primo nodo con la key selezionato, ma in caso di più
+				Dato l'informazione della chiave, valore e altezza, permette una ricerca in profondità dell'albero e restituisce
+				Il Nodo con quelle caratteristiche, va a sostituire il metodo searchNode() il quale restituiva il primo nodo con la key selezionato, ma in caso di più
 				nodi con lo stesso key si fermava al primo trovato, tipicamente a quello con l'altezza più grande.
 			
 		
@@ -46,7 +46,7 @@
 	1 - Creazione degli alberi AVL A e B
 	
 		1.1)All'interno di generateTreesTest() troviamo un algoritmo il quale genera due alberi AVL con la caratteristiche tali che le chiavi di uno siano tutte
-			strettamente minori delle chiavi dell' altro, del tutto in kodalità randomica, con numero, chiavi e valori differenti.
+			strettamente minori delle chiavi dell' altro, del tutto in modalità randomica, con numero, chiavi e valori differenti.
 	
 	
 	
@@ -58,7 +58,7 @@
 		
 		2.2)Facciamo una visualizzazione in ampiezza dell'albero unito.
 		
-		2.3)Dalla lista ricavata nel punto (2.2) in modalità a pila risaliamo ogni nodo e ricalcoliamo la nuova altezza e provvediamo se necessario al bilanciamento.
+		2.3)Dalla lista ricavata nel punto (2.2) in modalità a pila risaliamo ogni nodo fino alla radice e ricalcoliamo la nuova altezza e provvediamo se necessario al bilanciamento.
 		
 		
 			

@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 """
-	File name:			Main.py
-	Author:				Raoul Landi
+	File name:		Main.py
+	Author:			Raoul Landi
 	Modified by:		Raoul Landi
-	Matr:               0258005
+	Matr:			0258005
 	Date created:		29/11/2016
 	Date last modified:	29/11/2017
 	Python Version:		3.6

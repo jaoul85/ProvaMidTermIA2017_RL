@@ -13,11 +13,13 @@
 	Problema 2 - Concatenazione di alberi  AVL:
 
 	Siano dati due alberi AVL A e B tali che le chiavi di uno siano tutte
-    strettamente minori delle chiavi dell' altro. Progettare e implementare un
-    algoritmo che restituisca un nuovo albero AVL ottenuto come
-    concatenazione di A e B.
+	strettamente minori delle chiavi dell' altro. Progettare e implementare un
+	algoritmo che restituisca un nuovo albero AVL ottenuto come
+	concatenazione di A e B.
 """
+
 import random
+
 from dictTrees.dictionaryAVL import DictAVL
 
 from dictTrees.dictBinaryTree import DictBinaryTree
@@ -27,7 +29,7 @@ def MergeTreesAVL(Tree_AVL_A , Tree_AVL_B):
 	"""
 	:param Tree_AVL_A:	deve essere un ablero AVL
 	:param Tree_AVL_B:	deve essere un ablero AVL
-	:return:			Un albero AVL risultato come fusione tra gli Alberi in Ingresso
+	:return:		Un albero AVL risultato come fusione tra gli Alberi in Ingresso
 	"""
 	Tree_AVL_Merge = DictAVL()# istanziamo Tree_AVL_Merge come albero di tipo AVL per ora vuoto
 	
@@ -49,7 +51,7 @@ def MergeTreesAVL(Tree_AVL_A , Tree_AVL_B):
 
 		if Tree_AVL_B.key(Node_Min_B) > Tree_AVL_A.key(Root_TreeA):
 			Tree_AVL_B.tree.insertAsLeftSubTree(Node_Min_B, Tree_AVL_A.tree)
-		else: # caso per inserire sottoalbero destro, in questo compito e' un caso che non avviene, lasciato per algoritmi futuri
+		else: # caso per inserire sottoalbero destro, in questo compito e' un caso che non si verifica, lasciato per algoritmi futuri
 			Tree_AVL_B.tree.insertAsRightSubTree(Node_Min_B, Tree_AVL_A.tree)
 
 		Tree_AVL_Merge=Tree_AVL_B
@@ -59,13 +61,13 @@ def MergeTreesAVL(Tree_AVL_A , Tree_AVL_B):
 		if Tree_AVL_A.key(Node_Min_A) > Tree_AVL_B.key(Root_TreeB):
 			Tree_AVL_A.tree.insertAsLeftSubTree(Node_Min_A, Tree_AVL_B.tree)
 
-		else: # caso per inserire sottoalbero destro, in questo compito e' un caso che non avviene, lasciato per algoritmi futuri
+		else: # caso per inserire sottoalbero destro, in questo compito e' un caso che non si verifica, lasciato per algoritmi futuri
 			Tree_AVL_A.tree.insertAsRightSubTree(Node_Min_A, Tree_AVL_B.tree)
 
 		Tree_AVL_Merge = Tree_AVL_A
 
 	"""
-	(4)	In questo punto abbiamo ottenuto un albero Tree_AVL_Merge dove troviamo i due alberi in ingresso uniti come visti nel punto (2) e (3)
+	(4) In questo punto abbiamo ottenuto un albero Tree_AVL_Merge dove troviamo i due alberi in ingresso uniti come visti nel punto (2) e (3)
 		attualmente questo albero non e' ancora bilanciato pertanto la primo cosa sara' quello di vare una visuale in ampiezza
 	(5) Dopo avere ottenuto la visuale in ampiezza come una lista dei nodi degli alberi dal punto (4) effetuiamo una 'pila' in maniera
 		da risalire l'albero dalle foglie fino alla radice, per ogni passaggio aggiorniamo l'altezzo del nodo in esame ed effetuiamo la

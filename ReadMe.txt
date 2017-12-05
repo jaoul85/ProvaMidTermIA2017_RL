@@ -54,7 +54,7 @@
 	2 - Bilanciamento Albero come risultato dell'unione degli alberi AVL A e Bilanciamento
 	
 		2.1)Alla fine del passo (1) abbiamo come risultato una Albero AVL come sotto albero dell'elemento piu piccolo dell' altro albero, ma questa unione non risulta ancora un Albero
-			di tipo AVL, pertanto dobbiamo effetuare il bilanciamento.
+			di tipo AVL, pertanto dobbiamo effettuare il bilanciamento.
 		
 		2.2)Facciamo una visualizzazione in ampiezza dell'albero unito.
 		
@@ -70,13 +70,13 @@
 			https://github.com/jaoul85/ProvaMidTermIA2017_RL/blob/master/tempo_creazione_Albero_AVL.png
 		
 		3.2)Tempo di ricerca del nodo con la chiave minima:
-			Teoricamente l'aldamento temporale per la ricerca del nodo con la chiave minima, perciò andando a confrontare sempre il figlio sinistro equivale a O(log2(n)).
+			Teoricamente l'andamento temporale per la ricerca del nodo con la chiave minima, perciò andando a confrontare sempre il figlio sinistro equivale a O(log2(n)).
 			Nella funzione minKeySonMeasure( Sample , Lenght ) indicando il numero di campioni per le misure e n come numero di elementi è possibile misurare
 			la esecuzione pratica (rosso) confrontata con quella teorica (blu) in seguito un esempio:
 			https://github.com/jaoul85/ProvaMidTermIA2017_RL/blob/master/tempo_ricerca_nodo_key_minore.png
 		
 		3.3)Tempo di ricerca di un nodo specifico:
-			Teoricamente l'aldamento temporale per la ricerca di un nodo equivale a O(log2(n)).
+			Teoricamente l'andamento temporale per la ricerca di un nodo equivale a O(log2(n)).
 			Nella funzione searchNodeMeasure( Sample , Lenght ) indicando il numero di campioni per le misure e n come numero di elementi è possibile misurare
 			la esecuzione pratica (rosso) confrontata con quella teorica (blu) in seguito un esempio:
 			https://github.com/jaoul85/ProvaMidTermIA2017_RL/blob/master/tempo_ricerca_nodo.png
@@ -94,8 +94,8 @@
 	
 	4 - Analisi del tempo di esecuzione teorico e sperimentale dell'algoritmo creato:
 	
-		4.1) Nella funzione generateTreesTest() abbiamo principalmente alcuni cicli for i quali servono per determina le chiavi e valori che si voglino inserire nei due alberi
-			in maniera che abbiamo la caratteristicha come indicato nelle traccia "chiavi di uno siano tutte strettamente minori delle chiavi dell' altro" dunque avranno respsettivamente
+		4.1) Nella funzione generateTreesTest() abbiamo principalmente alcuni cicli for i quali servono per determina le chiavi e valori che si vogliono inserire nei due alberi
+			in maniera che abbiamo la caratteristica come indicato nelle traccia "chiavi di uno siano tutte strettamente minori delle chiavi dell' altro" dunque avranno respsettivamente
 			tempistiche O(Na) e O(Nb)
 			
 			Durante la creazione degli alberi il metodo insert è inserito all'interno di un ciclo for , pertanto conoscendo il tempo che inserire il nodo in un albero AVL, come nel punto (3.1)
@@ -111,15 +111,15 @@
 			la esecuzione pratica (rosso) confrontata con quella teorica (blu) in seguito un esempio:
 			https://github.com/jaoul85/ProvaMidTermIA2017_RL/blob/master/tempo_creazione_funzione_generatetrees.png
 		
-		4.2)Nella funzione MergeTreesAVL(Tree_AVL_A, Tree_AVL_B) dati come imput due alberi AVL gli unisce e rstituisce un nuovo albero AVL, allinterno troviamo operazioni
-			per individuare la radice con tempi O(1) e per indivisuare il nodo con la chiave più piccola con tempistiche calcolate in (3.2), in questo caso avremo O(log2(Na)) e O(log2(Nb))
+		4.2)Nella funzione MergeTreesAVL(Tree_AVL_A, Tree_AVL_B) dati come imput due alberi AVL gli unisce e restituisce un nuovo albero AVL, all'interno troviamo operazioni
+			per individuare la radice con tempi O(1) e per individuare il nodo con la chiave più piccola con tempistiche calcolate in (3.2), in questo caso avremo O(log2(Na)) e O(log2(Nb))
 			
-			Succesivamente a seconda dei diversi casi avremo  l'inserimento dell'albero più piccolo come sottoalbero di quello più grande e questa oprazioni impiega un O(1) come possiamo notare dal punto (3.5)
+			Successivamente a seconda dei diversi casi avremo  l'inserimento dell'albero più piccolo come sottoalbero di quello più grande e questa operazione impiega un O(1) come possiamo notare dal punto (3.5)
 			
-			Immediatamente dopo l'unione dei due alberi si effetua una visione in ampiezza della albero e come visto nel punto (3.4) in questo caso avremo tempistiche di O(Na+Nb)
+			Immediatamente dopo l'unione dei due alberi si effettua una visione in ampiezza della albero e come visto nel punto (3.4) in questo caso avremo tempistiche di O(Na+Nb)
 			
-			Per effeuare un bilanciamento dell'albero si usa un ciclo while con la visita in ampiezza come una pila, per bilanciare ogni nodo dove è necessario, operazioni di aggiornamento di altezza e bilanciamento si effetuano in O(1),
-			ma per individuare il Nodo esatto si effetua una operazione di ricerca il quale come mostarto in (3.3), alla fine avremo una esecuzione di O((Na+Nb)*log2(Na+Nb))
+			Per effettuare un bilanciamento dell'albero si usa un ciclo while con la visita in ampiezza come una pila, per bilanciare ogni nodo dove è necessario, operazioni di aggiornamento di altezza e bilanciamento si effettuano in O(1),
+			ma per individuare il Nodo esatto si effettua una operazione di ricerca il quale come mostato in (3.3), alla fine avremo una esecuzione di O((Na+Nb)*log2(Na+Nb))
 			----------------------------------------------------------------------
 			T(N) = O(log2(Na)) + O(log2(Nb)) + O(Na+Nb) + O((Na+Nb)*log2(Na+Nb)) + C
 			----------------------------------------------------------------------
@@ -131,15 +131,9 @@
 			la esecuzione pratica (rosso) confrontata con quella teorica (blu) in seguito un esempio:
 			https://github.com/jaoul85/ProvaMidTermIA2017_RL/blob/master/tempo_funzione_mergetreesAVL.png
 		
-		4.3) Calcolati i tempi nei punti (4.1) e (4.2) è presumere dire che il tempo complessimo dell'algoritmo dalla creazione dei due alberi AVL e la loro unione in unaltro Albreo AVL
+		4.3) Calcolati i tempi nei punti (4.1) e (4.2) è presumere dire che il tempo complessivo dell'algoritmo dalla creazione dei due alberi AVL e la loro unione in un altro Albreo AVL
 			ha tempo complessivo di:
 			T(N) = O(N log2(N))
 			Nella funzione TimeTotal( Sample ) indicando il numero di campioni per il numero di esecuzioni possiamo notare la esecuzione pratica (rosso) confrontata con quella teorica (blu)
 			in seguito un esempio:
 			https://github.com/jaoul85/ProvaMidTermIA2017_RL/blob/master/tempo_totale_algoritmo.png
-			
-			
-			
-			
-			
-			

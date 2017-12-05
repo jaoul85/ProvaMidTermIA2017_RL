@@ -121,7 +121,7 @@
 			Per effeuare un bilanciamento dell'albero si usa un ciclo while con la visita in ampiezza come una pila, per bilanciare ogni nodo dove è necessario, operazioni di aggiornamento di altezza e bilanciamento si effetuano in O(1),
 			ma per individuare il Nodo esatto si effetua una operazione di ricerca il quale come mostarto in (3.3), alla fine avremo una esecuzione di O((Na+Nb)*log2(Na+Nb))
 			----------------------------------------------------------------------
-			T(N) = O(log2(Na)) + O(log2(Nb)) + O(Na+Nb) + O((Na+Nb)*log2(Na+Nb))
+			T(N) = O(log2(Na)) + O(log2(Nb)) + O(Na+Nb) + O((Na+Nb)*log2(Na+Nb)) + C
 			----------------------------------------------------------------------
 			Dato che il numero di elementi Na e Nb è scelto in modo randomico ci poniamo nel caso medio dove Na=Nb=N, pertanto possiamo approssimare a:
 			----------------------------------------------------------------------
